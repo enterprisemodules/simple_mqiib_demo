@@ -47,4 +47,4 @@ $ vagrant up pe-mqiib01
 
 Check here the example run:
 
-[![asciicast](https://asciinema.org/a/125127)
+[![asciicast](https://asciinema.org/a/125127.png)](https://asciinema.org/a/125127)
