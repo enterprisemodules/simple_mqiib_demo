@@ -1,12 +1,8 @@
 /.vagrant
 /software
-/modules/concat
-/modules/connect
 /modules/easy_type
 /modules/stdlib
-/modules/swap_file
 /modules/timezone
-.byebug_history
 /.librarian
 /.tmp
 .DS_Store
@@ -21,6 +17,8 @@
 /modules/sysctl
 /modules/limits
 /modules/debconf
-/modules/bar_files/files
 /modules/yum
 /modules/apt
+/modules/systemd
+/modules/augeasproviders_sysctl
+/modules/augeasproviders_core

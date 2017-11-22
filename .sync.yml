@@ -1,0 +1,21 @@
+Puppetfile:
+  generic:
+    AlexCline-dirtree:
+      version: 0.2.1
+    herculesteam-augeasproviders_sysctl:
+      version: 2.2.0
+    herculesteam-augeasproviders_core:
+      version: 2.1.4
+    camptocamp-systemd:
+      version: 1.1.0
+  em:
+    iib_install:
+      version: 1.0.8
+    iib_config:
+      version: 1.0.5
+    mq_install:
+      version: 1.0.10
+    mq_config:
+      version: 1.0.2
+  local:
+    - bar_files

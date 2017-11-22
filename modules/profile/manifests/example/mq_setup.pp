@@ -68,6 +68,9 @@ class profile::example::mq_setup()
     # trigint  => '999999999',
   }
 
+  mq_install::autostart {'QM1':
+    ensure => 'present'
+  }
   #
   # Here is the definition of a Queue  with all possible properties.
   # Most of these are default. Use just the ones you need to be different from defaults

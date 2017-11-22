@@ -8,6 +8,10 @@ class profile::example::iib_setup()
     status => 'running',
   }
 
+  iib_install::autostart{ 'NODE1':
+    ensure => 'present',
+  }
+
   #
   # Here is the definition of a Server  with all possible properties.
   # Most of these are default. Use just the ones you need to be different from defaults
