@@ -1,5 +1,4 @@
-forge 'http://forge.enterprisemodules.com'
-
+forge 'http://forge.puppetlabs.com'
 #
 #
 # Here are some generic modules
@@ -14,11 +13,11 @@ mod 'camptocamp-systemd',                   '1.1.0'
 #
 # and the EM modules
 #
-mod 'enterprisemodules-iib_install',        '1.0.10'
-mod 'enterprisemodules-iib_config',         '1.0.6'
-mod 'enterprisemodules-mq_install',         '1.0.10'
-mod 'enterprisemodules-mq_config',          '1.0.4'
-mod 'enterprisemodules-easy_type',          '2.3.6'
+mod 'enterprisemodules-iib_install',        '1.0.12'
+mod 'enterprisemodules-iib_config',         '1.0.9'
+mod 'enterprisemodules-mq_install',         '1.0.13'
+mod 'enterprisemodules-mq_config',          '1.0.10'
+mod 'enterprisemodules-easy_type',          '2.3.14'
 #
 # Modules that are part of the control repo. R10K doesn't need to touch these
 #
