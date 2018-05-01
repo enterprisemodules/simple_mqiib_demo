@@ -20,6 +20,7 @@ Puppet Enterprise is not required when you use Puppet masterless.
 
 ### IBM MQ
 - WS_MQ_V8.0.0.4_LINUX_ON_X86_64_IM.tar.gz
+- IBM_MQ_9.0.0.0_LINUX_X86-64.tar.gz
 
 ## Starting the nodes masterless
 
