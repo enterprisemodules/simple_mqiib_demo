@@ -8,10 +8,10 @@ This repo depends on `vagrant`. So check [vagrantup.com]
 
 ## Required software
 
-The software must be placed in in the `software` directory. It must contain the next files:
+The software must be placed in in the `modules/software/files` directory. It must contain the next files:
 
 ### Puppet Enterprise
-- puppet-enterprise-2017.2.1-el-7-x86_64.tar.gz (unzipped)
+- puppet-enterprise-2017.3.4-el-7-x86_64 (unzipped tar.gz)
 
 Puppet Enterprise is not required when you use Puppet masterless.
 
