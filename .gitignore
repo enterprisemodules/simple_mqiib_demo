@@ -22,3 +22,6 @@
 /modules/systemd
 /modules/augeasproviders_sysctl
 /modules/augeasproviders_core
+/modules/ibm_profile
+/modules/echo
+/modules/firewalld
