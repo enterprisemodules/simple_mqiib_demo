@@ -1,11 +1,77 @@
-deployment_zone: vagrant
+---
+deployment_zone:  vagrant
+role:             role::mqiib
 
-role: role::mqiib
+mq_install::software::source_location:                puppet:///modules/software
 
-software_location: &software_location   puppet:///modules/software
+ibm_profile::mq_machine::software::version:           9.1.0.0
+ibm_profile::iib_machine::software::version:          10.0.0.11 
 
-mq_install::software::version:           9.0.0.0
-mq_install::software::source_location:   *software_location
+# 
+# Skip firewall and auto start
+#
+ibm_profile::mq_machine::firewall:                    skip
+ibm_profile::iib_machine::firewall:                   skip
+ibm_profile::iib_machine::autostart:                  skip
+ibm_profile::mq_machine::autostart:                   skip
 
-profile::installiib::source_location:   *software_location
-profile::installiib::version:           10.0.0.9
+#
+# The config
+#
+ibm_profile::mq_managers:
+  QM1:
+    logfile_pages: 65535
+    deadq:    SYSTEM.DEAD.LETTER.QUEUE
+    defxmitq: QM1
+    maxhands: 2056
+    default:  true
+  QM2:
+    logfile_pages: 65535
+    deadq:    SYSTEM.DEAD.LETTER.QUEUE
+    defxmitq: QM1
+    maxhands: 2056
+    default:  true
+
+#
+# Defauls for all brokers
+#
+ibm_profile::iib_machine::broker_setup:defaults:
+  ensure:   present
+  status:   running
+
+#
+# Characteristics for individual brokers
+#
+ibm_profile::iib_brokers:
+  '10.0.0.11/BROKER1':
+    queue_manager:                        QM1
+    auto_restart:                         true # Auto restartto set correct values
+    cache_policy:                         default
+    cache_port_range:                     2910-2930
+    http_listener_http_connector_port:    7091
+    http_listener_https_connector_port:   7094
+    auto_restart:                         true
+    http_listener_enable_ssl_connector:   true
+
+
+#
+# Defauls for all servers
+#
+ibm_profile::iib_machine::server_setup:defaults:
+  ensure:   present
+  status:   running
+#
+# Characteristics for individual servers
+#
+ibm_profile::iib_machine::server_setup::list:
+  10.0.0.11/BROKER1/SERVER_1:    {}
+
+#
+# Defauls for all deployments
+#
+ibm_profile::iib_machine::deployments:defaults:
+  ensure:   present
+#
+# Characteristics for individual deployments
+#
+ibm_profile::iib_machine::deployments::list: {}

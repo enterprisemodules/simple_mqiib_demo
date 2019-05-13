@@ -25,3 +25,4 @@
 /modules/ibm_profile
 /modules/echo
 /modules/firewalld
+/modules/firewall

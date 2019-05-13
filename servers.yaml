@@ -1,14 +1,51 @@
 ---
-pe-master:
+#
+# The default settings for all nodes
+#
+defaults:
+  domain_name:     example.com
+  cpucount:         1
+  additional_hosts: |
+    127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4
+    192.168.253.10 mqiibmaster.example.com puppet master
+  box:              enterprisemodules/centos-7.3-x86_64-nocm
+  virtualboxorafix: enable
+#
+# The default settings for all ML nodes
+#
+ml-defaults:
+  type:             masterless
+#
+# The default settings for all PE nodes
+#
+pe-defaults:
+  type:             pe-agent
+  puppet_master:    mqiibmaster
+
+#
+# The settings for the Puppet Enterprise Server
+#  
+pe-mqiibmaster:
   public_ip:       '192.168.253.10'
   cpucount:         2
   ram:              3072
   type:             pe-master
+  puppet_installer: puppet-enterprise-2019.1.0-el-7-x86_64/puppet-enterprise-installer
+
+#
+# All masterless nodes
+#
 ml-mqiib01:
   public_ip: '192.168.253.32'
-  cpucount: 2
-  type:     masterless
+  software_files:
+    - 10.0.0-IIB-LINUXX64-FP0011.tar.gz
+    - IBM_MQ_9.1.0.0_LINUX_X86-64.tar.gz
+
+#
+# All Puppet Agent nodes
+#
 pe-mqiib01:
   public_ip: '192.168.253.32'
-  cpucount: 2
-  type:     pe-agent
+  software_files:
+    - 10.0.0-IIB-LINUXX64-FP0011.tar.gz
+    - IBM_MQ_9.1.0.0_LINUX_X86-64.tar.gz

@@ -1,0 +1,14 @@
+---
+pe-master:
+  public_ip:       '192.168.253.10'
+  cpucount:         2
+  ram:              3072
+  type:             pe-master
+ml-mqiib01:
+  public_ip: '192.168.253.32'
+  cpucount: 2
+  type:     masterless
+pe-mqiib01:
+  public_ip: '192.168.253.32'
+  cpucount: 2
+  type:     pe-agent
