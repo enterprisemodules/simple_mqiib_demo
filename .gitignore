@@ -26,3 +26,4 @@
 /modules/echo
 /modules/firewalld
 /modules/firewall
+/puppet_version
