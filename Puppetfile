@@ -11,7 +11,7 @@ mod 'herculesteam-augeasproviders_core'
 mod 'camptocamp-systemd'
 mod 'ipcrm-echo'
 mod 'puppetlabs-firewall'
-mod 'crayfishx-firewalld'
+mod 'puppet-firewalld'
 #
 # and the EM modules
 #
