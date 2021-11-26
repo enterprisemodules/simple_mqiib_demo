@@ -23,7 +23,7 @@ pe-defaults:
 # The settings for the Puppet Enterprise Server
 #
 pe-mqiibmaster:
-  public_ip:       '192.168.253.10'
+  public_ip:       '192.168.56.10'
   cpucount:         2
   ram:              3072
   type:             pe-master
@@ -33,7 +33,7 @@ pe-mqiibmaster:
 # All masterless nodes
 #
 ml-mqiib01:
-  public_ip: '192.168.253.32'
+  public_ip: '192.168.56.32'
   software_files:
     - 10.0.0-IIB-LINUXX64-FP0011.tar.gz
     - IBM_MQ_9.1.0.0_LINUX_X86-64.tar.gz
@@ -42,7 +42,7 @@ ml-mqiib01:
 # All Puppet Agent nodes
 #
 pe-mqiib01:
-  public_ip: '192.168.253.32'
+  public_ip: '192.168.56.32'
   software_files:
     - 10.0.0-IIB-LINUXX64-FP0011.tar.gz
     - IBM_MQ_9.1.0.0_LINUX_X86-64.tar.gz
