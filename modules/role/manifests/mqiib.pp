@@ -7,5 +7,6 @@ class role::mqiib()
 
   Class['::profile::base']
   -> Class['::ibm_profile::mq_machine']
+  Class['::profile::base']
   -> Class['::ibm_profile::iib_machine']
 }
