@@ -3,6 +3,7 @@
 # Here are some generic modules
 mod 'puppetlabs-stdlib'
 mod 'saz-limits'
+mod 'puppetlabs-concat'
 mod 'saz-timezone'
 mod 'puppet-archive'
 mod 'AlexCline-dirtree'
