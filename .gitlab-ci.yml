@@ -10,7 +10,3 @@ mqiib01_demo_check:
   extends: .demo_check
   variables:
     server: ml-mqiib01
-  before_script:
-    - mkdir -p modules/software/files
-    - cp ~/software/10.0.0-IIB-LINUXX64-FP0011.tar.gz modules/software/files
-    - cp ~/software/IBM_MQ_9.1.0.0_LINUX_X86-64.tar.gz modules/software/files

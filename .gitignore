@@ -27,3 +27,4 @@
 /modules/firewalld
 /modules/firewall
 /puppet_version
+/modules/concat

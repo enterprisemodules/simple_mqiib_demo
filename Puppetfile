@@ -1,13 +1,14 @@
 #
 #
 # Here are some generic modules
+mod 'petems-swap_file', :git => 'https://github.com/enterprisemodules/petems-swap_file.git', ref: 'master'
 mod 'puppetlabs-stdlib'
 mod 'saz-limits'
 mod 'puppetlabs-concat'
 mod 'saz-timezone'
 mod 'puppet-archive'
 mod 'AlexCline-dirtree'
-mod 'herculesteam-augeasproviders_sysctl'
+mod 'puppet-augeasproviders_sysctl'
 mod 'puppet-augeasproviders_core'
 mod 'puppet-systemd'
 mod 'ipcrm-echo'
